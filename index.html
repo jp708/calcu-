@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login con Navbar - localStorage</title>
+   <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+   <div class="container" id="auth-container">
+      <h2 id="form-title">Iniciar Sesión</h2>
+
+      <div id="login-form">
+         <input type="text" id="login-username" placeholder="Usuario" />
+         <input type="password" id="login-password" placeholder="Contraseña" />
+         <button onclick="login()">Entrar</button>
+         <div class="toggle" onclick="toggleForm()">¿No tienes cuenta? Regístrate</div>
+      </div>
+
+      <div id="register-form" >
+         <input type="text" id="register-username" placeholder="Nuevo usuario" />
+         <input type="password" id="register-password" placeholder="Nueva contraseña" />
+         <button onclick="register()">Registrar</button>
+         <div class="toggle" onclick="toggleForm()">¿Ya tienes cuenta? Inicia sesión</div>
+      </div>
+   </div>
+
+   <div id="app" style="display:none;">
+      <div class="navbar">
+         <div class="logo">Mi Sitio</div>
+         <nav>
+            <a href="#" onclick="showSection('home')">Inicio</a>
+            <a href="#" onclick="showSection('calculadora')">calculadora</a>
+            <a href="#" onclick="showSection('contacto')">Contacto</a>
+         </nav>
+         <div class="user">
+            <span id="navbar-username"></span>
+            <button class="logout-btn" onclick="logout()">Cerrar sesión</button>
+         </div>
+      </div>
+
+      <div class="content active-section" id="home">
+         <h2>Bienvenido a la página de inicio</h2>
+         <p>Explora nuestras secciones usando la barra de navegación.</p>
+      </div>
+
+      <div class="calculadora" id="calculadora">
+         <h2>calculadora</h2>
+         <p>Aquí podras realizar las operacionesbasicas que necesites;].</p>
+
+<h1>Calculadora Inteligente</h1>
+        <!--agregar imagenes representativas al centro o a los lados -->
+        <section class="section">
+            <h2>Operaciones Matemáticas</h2>
+            <!--cabiar caja de texto por etiqueta -->
+            <!--crear un saludo-->
+            <input placeholder="saludo--">
+            <!--dar formato al saludo-->
+            <!--el saludo desaparece al realizar operaciones-->
+             <label for="bienbenid@s"></label>
+
+            <input id="num1" type="number" placeholder="Número 1"> <!--aumentar el tamaño de la letra en input-->
+            <input id="num2" type="number" placeholder="Número 2">
+
+            <select id="operation">
+                <option value="+">Sumar</option>
+                <option value="-">Restar</option>
+                <option value="*">Multiplicar</option>
+                <option value="/">Dividir</option>
+                <option value="%">Módulo</option>
+                <option value="**">Potencia</option>
+                <option value="sqrt">Radicacion</option>
+                <!--incluir dos operaciones matematicas potencia(2) y raiz(2)-->
+            </select>
+            <button id="calcBtn">Calcular</button>
+            <!--personalizar la respuesta -->
+            <p id="mathResult"></p><!--parrafo para dar respuesta -->
+        </section>
+
+      </div>
+
+      <div class="content" id="contacto">
+         <h2>Contacto</h2>
+         <p>Puedes contactarnos al correo <b>contacto@misitio.com</b></p>
+      </div>
+   </div>
+
+
+
+   <script src="/js/java.js"></script>
+</body>
+
+</html>
